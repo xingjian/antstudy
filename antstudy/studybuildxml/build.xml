@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="AntStudy" default="deploy">
+    <description>antstudy</description>
+    <target name="init" description="初始化目录">
+    	<mkdir dir="build/classes" />
+		<mkdir dir="dist" />
+    </target>
+    <target name="compile" depends="init" description="编译">
+    	<javac srcdir="src" destdir="build/classes" encoding="UTF-8">
+    	</javac>
+    </target>
+	<target name="doc" depends="init" description="文档">
+		<javadoc sourcepath="src" destdir="build/classes" encoding="UTF-8"></javadoc>
+	</target>
+	<target name="deploy" depends="compile,doc">
+		<jar destfile="dist/AntStudy.jar" basedir="build/classes"></jar>
+	 </target>
+</project>
