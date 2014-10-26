@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<project name="study2" default="compile">
+	<target name="compile">
+		<echo>compile complete</echo>
+	</target>
+</project>
